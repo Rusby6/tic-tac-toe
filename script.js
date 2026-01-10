@@ -71,8 +71,6 @@ function verificarGanador() {
   for (const comb of combinaciones) {
     const [a, b, c] = comb;
     if (valores[a] && valores[a] === valores[b] && valores[a] === valores[c]) {
-      // Opcional: resaltar las celdas ganadoras
-      resaltarCeldasGanadoras([celdas[a], celdas[b], celdas[c]]);
       return valores[a];
     }
   }
@@ -80,13 +78,13 @@ function verificarGanador() {
   return null;
 }
 
-// Función para verificar empate
+// Verificar empate
 function esEmpate() {
   const celdas = document.querySelectorAll(".cell");
   return Array.from(celdas).every(cell => cell.textContent !== "");
 }
 
-// Función para actualizar el mensaje de turno
+// Actualizar el mensaje de turno
 function actualizarTurno() {
   const mensaje = document.getElementById("gameMessage");
   if (juegoActivo) {
@@ -94,10 +92,9 @@ function actualizarTurno() {
   }
 }
 
-// Función para resaltar celdas ganadoras (opcional)
 function resaltarCeldasGanadoras(celdasGanadoras) {
   celdasGanadoras.forEach(cell => {
-    cell.style.backgroundColor = '#90EE90'; // Verde claro
+    cell.style.backgroundColor = '#90EE90'; 
     cell.style.color = '#000';
   });
 }
