@@ -50,7 +50,7 @@ tic-tac-toe/
 1. Clona el repositorio:
 
 ```bash
-git clone https://github.com/Rusby6/tic-tac-toe
+git clone https://github.com/Rusby6/tic-tac-toe.git
 ```
 2. Accede al directorio del proyecto:
 
